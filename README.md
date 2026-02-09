@@ -48,8 +48,10 @@ Features implemented:
     ```bash
     idf.py menuconfig
     ```
-    - Set your I2C pins (CONFIG_I2C_MASTER_SCL and CONFIG_I2C_MASTER_SDA)
-    - Enable PSRAM if using full-screen buffers
+    - Go to Component Config → ESP-PSRAM
+    - Enable Support for external, SPI-connected RAM (if not already enabled)
+    - (optional) Then go: Component Config → Heap memory debugging (or search for SPIRAM)
+    - (optional) Enable Allow external memory to be used as memory for heap allocation
 
 5. **Build and flash**:
     ```bash
