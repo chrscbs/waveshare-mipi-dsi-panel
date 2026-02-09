@@ -39,14 +39,19 @@ Features implemented:
 2. **Set up ESP-IDF**:
     Follow the official [ESP-IDF setup guide](https://www.waveshare.com/wiki/ESP32-P4-Nano-StartPage)
 
-3. **Configure project**:
+3. **Add [waveshare/esp_lcd_jd9365_10_1](https://components.espressif.com/components/waveshare/esp_lcd_jd9365_10_1) package to the project**:
+    ```bash
+    idf.py add-dependency "waveshare/esp_lcd_jd9365_10_1"
+    ```
+
+4. **Configure project**:
     ```bash
     idf.py menuconfig
     ```
     - Set your I2C pins (CONFIG_I2C_MASTER_SCL and CONFIG_I2C_MASTER_SDA)
     - Enable PSRAM if using full-screen buffers
 
-4. **Build and flash**:
+5. **Build and flash**:
     ```bash
     idf.py build
     idf.py flash monitor
